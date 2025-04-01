@@ -1,0 +1,33 @@
+.about {
+  padding-top: 12px;
+  padding-bottom: 35px;
+
+  &__wrapper--left {
+    padding-left: 16px;
+    padding-right: 21px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 18px;
+
+    &--768,
+    &--1120 {
+      display: none;
+    }
+  }
+
+  &__more {
+    padding-left: 32px;
+    font-weight: 500;
+    background-image: url(../img/about__more--svg.svg);
+    background-repeat: no-repeat;
+    background-position: center left;
+  }
+
+  &__img {
+    min-width: 320px;
+  }
+}

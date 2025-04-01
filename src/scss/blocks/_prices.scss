@@ -1,0 +1,17 @@
+.prices {
+  padding-bottom: 14px;
+
+  &__item {
+    flex-direction: column;
+    padding: 16px;
+    @include swiper-cards(260px, 200px);
+    border: none;
+    border-radius: 6px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+  }
+}

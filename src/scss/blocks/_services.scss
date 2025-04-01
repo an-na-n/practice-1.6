@@ -1,0 +1,43 @@
+.title {
+  margin-bottom: 24px;
+  padding-left: 16px;
+  background-image: url(../img/services__title--svg.svg);
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.services {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 12px;
+
+  &::after {
+    @include fading-effect(16px, 40px, 24px, 0.1);
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    padding-left: 16px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__button {
+    padding: 8px 17px 8px 17px;
+    color: $gray;
+    font-size: $font-size-md;
+    font-weight: 500;
+    min-width: max-content;
+
+    &--active {
+      background-color: $white;
+      border: 2px solid $lightBlue;
+      border-radius: 6px;
+    }
+  }
+}

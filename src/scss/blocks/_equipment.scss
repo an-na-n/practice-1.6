@@ -1,0 +1,18 @@
+.equipment {
+  padding-bottom: 14px;
+
+  &__show-more {
+    display: none;
+  }
+
+  &__link {
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    @include swiper-cards(240px, 160px);
+  }
+
+  &__svg {
+    align-self: flex-end;
+  }
+}

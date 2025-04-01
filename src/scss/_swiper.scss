@@ -1,0 +1,61 @@
+.swiper {
+  height: 100%;
+
+  &::after {
+    @include fading-effect(35px, 100%, 24px, -0.9);
+    z-index: 2;
+  }
+}
+
+.swiper-wrapper {
+  max-width: 320px;
+
+  & .swiper-slide {
+    position: relative;
+    padding: 16px;
+    margin-bottom: 24px;
+    padding-right: 0;
+    width: 75%;
+
+    &:last-child {
+      padding-right: 16px;
+    }
+  }
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.swiper.swiper-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  display: inline-block;
+  background: #fff;
+  margin: 0 12px 0 0;
+  cursor: pointer;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+
+.swiper.swiper-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet
+  .swiper-pagination-bullet-active {
+  background-color: #b5b6bc;
+}

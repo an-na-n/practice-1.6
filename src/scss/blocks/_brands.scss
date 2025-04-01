@@ -1,0 +1,13 @@
+.brands {
+  padding-bottom: 14px;
+
+  &__show-more {
+    display: none;
+  }
+
+  &__link {
+    align-items: center;
+    padding: 20px 16px 20px 16px;
+    @include swiper-cards(240px, 72px);
+  }
+}

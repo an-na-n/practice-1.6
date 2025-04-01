@@ -12,3 +12,33 @@
   position: absolute;
   top: 10px;
 }
+
+@mixin titles-padding($padding-left) {
+  padding: 16px 0 16px $padding-left;
+}
+
+@mixin fading-effect($bottom, $height, $width, $opacity) {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: $bottom;
+  height: $height;
+  width: $width;
+  background: linear-gradient(
+    to right,
+    rgba(248, 248, 248, $opacity),
+    $bgColor
+  );
+}
+
+@mixin swiper-cards($width, $height) {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: relative;
+  width: $width;
+  height: $height;
+  background-color: $white;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+}

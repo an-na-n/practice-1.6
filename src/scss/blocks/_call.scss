@@ -1,3 +1,6 @@
 .call {
-  display: none;
+  max-width: 320px;
+  box-shadow: 0px 0px -1px transparent, 16px 0 52px #0e185033,
+    0px 0px -1px transparent, 0px 0px -1px transparent;
+  background-color: $white;
 }

@@ -56,6 +56,7 @@ h1 {
   font-weight: 700;
   line-height: 40px;
   font-size: $font-size-lg;
+  letter-spacing: -0.6px;
 }
 
 h2 {
@@ -68,11 +69,13 @@ h2 {
   background-image: $title-gradient;
   border-top: $title-border;
   border-bottom: $title-border;
+  letter-spacing: -0.2px;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  letter-spacing: -0.2px;
 }
 
 p {
@@ -100,5 +103,6 @@ button {
   background-color: transparent;
   font-family: inherit;
   line-height: 24px;
+  letter-spacing: -0.2px;
   cursor: pointer;
 }

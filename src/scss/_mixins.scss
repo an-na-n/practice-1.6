@@ -1,11 +1,17 @@
 @mixin pink-button($width, $height) {
   position: relative;
-  display: inline-block;
+  display: flex;
+  text-align: center;
   padding: 12px 11px;
   width: $width;
   height: $height;
   background-color: $pink;
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
   border-radius: 50%;
+  font-size: 12px;
+  line-height: 24px;
 }
 
 @mixin button-svg {
@@ -15,6 +21,13 @@
 
 @mixin titles-padding($padding-left) {
   padding: 16px 0 16px $padding-left;
+}
+
+@mixin side-accent($width, $height) {
+  background-image: url(../img/side-accent--svg.svg);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: $width $height;
 }
 
 @mixin fading-effect($bottom, $height, $width, $opacity) {

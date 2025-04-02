@@ -1,9 +1,7 @@
 .title {
   margin-bottom: 24px;
   padding-left: 16px;
-  background-image: url(../img/services__title--svg.svg);
-  background-repeat: no-repeat;
-  background-position: center left;
+  @include side-accent(4px, 40px);
 }
 
 .services {

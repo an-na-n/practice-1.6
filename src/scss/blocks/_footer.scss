@@ -18,5 +18,10 @@
 
   &__link {
     letter-spacing: 0;
+    transition: $transition-default;
+
+    &:hover {
+      color: $pink;
+    }
   }
 }

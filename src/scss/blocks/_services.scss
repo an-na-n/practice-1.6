@@ -8,6 +8,11 @@
   padding-top: 24px;
   padding-bottom: 12px;
 
+  &::before {
+    @include fading-effect-left(14px, 40px, 20px, 0.1);
+    z-index: 5;
+  }
+
   &::after {
     @include fading-effect(16px, 40px, 24px, 0.1);
   }
@@ -16,12 +21,10 @@
     position: relative;
     display: flex;
     align-items: center;
+    width: 100%;
     overflow-x: scroll;
     padding-left: 16px;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    scrollbar-width: none;
   }
 
   &__button {
@@ -30,11 +33,26 @@
     font-size: $font-size-md;
     font-weight: 500;
     min-width: max-content;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: $transition-default;
+
+    &:hover {
+      color: $pink;
+      background-color: $white;
+      border-color: $lightPink;
+      border-radius: 6px;
+    }
 
     &--active {
       background-color: $white;
       border: 2px solid $lightBlue;
       border-radius: 6px;
+
+      &:hover {
+        color: $gray;
+        border: 2px solid $lightBlue;
+      }
     }
   }
 }

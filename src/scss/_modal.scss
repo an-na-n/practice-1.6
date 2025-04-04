@@ -39,6 +39,10 @@
     bottom: 0;
     padding: 4px 16px 4px 0;
     border: none;
+
+    &--submit {
+      cursor: pointer;
+    }
   }
 
   &__form {
@@ -48,13 +52,23 @@
   &__input {
     @include modal-input;
     margin-bottom: 16px;
+    transition: $transition-default;
 
     &::placeholder {
       color: #b5b6bc;
+      transition: $transition-default;
+    }
+
+    &:hover::placeholder {
+      color: $pink;
     }
 
     &--textarea {
       height: 118px;
+    }
+
+    &:hover {
+      border-color: $lightPink;
     }
   }
 
@@ -67,11 +81,22 @@
 
   &__link {
     color: $pink;
+    transition: $transition-default;
+
+    &:hover {
+      color: $text;
+    }
   }
 
   &__label {
     display: flex;
     position: relative;
+    color: $white;
+    transition: $transition-default;
+
+    &:hover {
+      color: $pink;
+    }
   }
 
   &__svg {

@@ -5,9 +5,22 @@
     display: none;
   }
 
+  &__svg rect {
+    stroke: $pink;
+    fill: none;
+    transition: $transition-default;
+  }
+
   &__link {
     align-items: center;
     padding: 20px 16px 20px 16px;
     @include swiper-cards(240px, 72px);
+
+    &:hover {
+      .brands__svg rect {
+        stroke: none;
+        fill: $lightPink;
+      }
+    }
   }
 }

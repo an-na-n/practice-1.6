@@ -13,18 +13,45 @@
     font-size: 14px;
     line-height: 18px;
 
-    &--768,
+    &--768 {
+      display: none;
+    }
+
     &--1120 {
+      display: none;
+      margin-top: -16px;
+    }
+
+    &--more {
       display: none;
     }
   }
 
-  &__more {
-    padding-left: 32px;
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 16px;
+    padding-left: 16px;
     font-weight: 500;
-    background-image: url(../img/about__more--svg.svg);
-    background-repeat: no-repeat;
-    background-position: center left;
+    transition: $transition-default;
+
+    &:hover {
+      color: $gray;
+    }
+  }
+
+  &__button-text {
+    padding-left: 32px;
+  }
+
+  &__svg {
+    position: absolute;
+    left: 24px;
+
+    &.open {
+      rotate: 180deg;
+    }
   }
 
   &__img {

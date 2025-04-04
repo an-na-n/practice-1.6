@@ -10,9 +10,20 @@
     font-size: 16px;
     font-weight: 500;
     @include swiper-cards(240px, 160px);
+
+    &:hover {
+      .equipment__svg rect {
+        stroke: none;
+        fill: $lightPink;
+      }
+    }
   }
 
   &__svg {
     align-self: flex-end;
+    & rect {
+      stroke: $pink;
+      fill: none;
+    }
   }
 }

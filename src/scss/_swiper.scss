@@ -1,8 +1,13 @@
 .swiper {
   height: 100%;
 
+  &::before {
+    @include fading-effect-left(35px, 80%, 20px, -0.9);
+    z-index: 5;
+  }
+
   &::after {
-    @include fading-effect(35px, 100%, 24px, -0.9);
+    @include fading-effect(35px, 80%, 24px, -0.9);
     z-index: 2;
   }
 }

@@ -41,6 +41,16 @@
   );
 }
 
+@mixin fading-effect-left($bottom, $height, $width, $opacity) {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: $bottom;
+  height: $height;
+  width: $width;
+  background: linear-gradient(to left, rgba(248, 248, 248, $opacity), $bgColor);
+}
+
 @mixin swiper-cards($width, $height) {
   display: flex;
   justify-content: space-between;

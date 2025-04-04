@@ -1,4 +1,6 @@
 .button {
+  transition: $transition-default;
+
   @include pink-button;
   &--round {
     padding: 12px 11px;
@@ -15,5 +17,10 @@
     border-radius: 16px;
     padding: 4px 16px 4px 12px;
     align-self: flex-end;
+  }
+
+  &:hover {
+    color: $pink;
+    background-color: $lightPink;
   }
 }

@@ -23,10 +23,6 @@
     background-position: center right;
   }
 
-  &__link {
-    @include pink-button(40px, 40px);
-  }
-
   &__svg {
     @include button-svg;
 
@@ -54,7 +50,7 @@
     height: 40px;
   }
 
-  &__link {
+  &__button {
     &--call,
     &--chat,
     &--profile {

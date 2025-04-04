@@ -51,15 +51,22 @@ body {
   font-size: $font-size-sm;
 }
 
-h1 {
+body.no-scroll {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main-title {
   margin: 0;
   font-weight: 700;
   line-height: 40px;
   font-size: $font-size-lg;
   letter-spacing: -0.6px;
+  @include side-accent(4px, 40px);
 }
 
-h2 {
+.title {
   margin: 0;
   @include titles-padding($padding-left-sm);
   color: $gray;

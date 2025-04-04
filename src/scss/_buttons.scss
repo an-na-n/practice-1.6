@@ -1,0 +1,19 @@
+.button {
+  @include pink-button;
+  &--round {
+    padding: 12px 11px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+
+  &--wide {
+    position: absolute;
+    width: 119px;
+    height: 32px;
+    bottom: 16px;
+    border-radius: 16px;
+    padding: 4px 16px 4px 12px;
+    align-self: flex-end;
+  }
+}

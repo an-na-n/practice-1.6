@@ -1,0 +1,86 @@
+.modal {
+  position: absolute;
+  min-height: 100vh;
+  top: 0;
+  right: 0;
+  z-index: 100;
+
+  &__overlay {
+    @include modal-overlay;
+    right: 0;
+    z-index: 99;
+  }
+
+  &__content {
+    position: absolute;
+    right: 0;
+    padding-bottom: 75px;
+    width: 320px;
+    box-shadow: 16px 0 52px #0e185033;
+    background-color: $white;
+    overflow-y: scroll;
+    height: 100vh;
+    z-index: 110;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__header {
+    padding: 25px 16px;
+    margin-bottom: 8px;
+  }
+
+  &__button {
+    position: relative;
+    width: 136px;
+    margin-left: auto;
+    bottom: 0;
+    padding: 4px 16px 4px 0;
+    border: none;
+  }
+
+  &__form {
+    padding: 0 16px 0 16px;
+  }
+
+  &__input {
+    @include modal-input;
+    margin-bottom: 16px;
+
+    &::placeholder {
+      color: #b5b6bc;
+    }
+
+    &--textarea {
+      height: 118px;
+    }
+  }
+
+  &__note {
+    margin-bottom: 19px;
+    color: $gray;
+    font-weight: 500;
+    line-height: 16px;
+  }
+
+  &__link {
+    color: $pink;
+  }
+
+  &__label {
+    display: flex;
+    position: relative;
+  }
+
+  &__svg {
+    align-self: center;
+
+    &--submit {
+      position: absolute;
+      right: 19px;
+      bottom: 11px;
+    }
+  }
+}

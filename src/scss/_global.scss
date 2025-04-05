@@ -49,6 +49,10 @@ body {
   background-color: $bgColor;
   color: $text;
   font-size: $font-size-sm;
+
+  @include tablet {
+    min-width: 768px;
+  }
 }
 
 body.no-scroll {
@@ -68,7 +72,7 @@ body.no-scroll {
 
 .title {
   margin: 0;
-  @include titles-padding($padding-left-sm);
+  @include titles-padding($spacing-sm);
   color: $gray;
   font-size: $font-size-md;
   font-weight: 400;
@@ -77,6 +81,10 @@ body.no-scroll {
   border-top: $title-border;
   border-bottom: $title-border;
   letter-spacing: -0.2px;
+
+  @include tablet {
+    @include titles-padding($spacing-md);
+  }
 }
 
 a {

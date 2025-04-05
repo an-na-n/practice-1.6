@@ -1,8 +1,24 @@
 .brands {
   padding-bottom: 14px;
 
-  &__show-more {
-    display: none;
+  @include tablet {
+    padding-bottom: $spacing-lg;
+  }
+
+  &__list {
+    @include tablet {
+      @include cards-list(768px, $spacing-md, $spacing-md);
+    }
+  }
+
+  &__item {
+    @include tablet {
+      @include cards-items(224px, $spacing-md);
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 
   &__svg rect {
@@ -21,6 +37,45 @@
         stroke: none;
         fill: $lightPink;
       }
+    }
+
+    @include tablet {
+      width: 224px;
+    }
+  }
+
+  &__show-more {
+    display: none;
+
+    @include tablet {
+      @include show-more(0, 48px);
+      margin-top: 8px;
+    }
+
+    &:hover:not(.active) {
+      color: $gray;
+    }
+
+    &:focus:not(.hover) {
+      color: inherit;
+    }
+  }
+
+  &__svg-more {
+    @include tablet {
+      position: absolute;
+      left: $spacing-lg;
+    }
+
+    &.open {
+      rotate: 180deg;
+    }
+  }
+
+  &__button-text {
+    @include tablet {
+      padding-left: 8px;
+      font-size: $font-size-md;
     }
   }
 }

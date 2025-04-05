@@ -1,6 +1,12 @@
 .footer {
-  padding: 16px 16px 19px 16px;
+  padding: $spacing-sm $spacing-sm 19px $spacing-sm;
   border-top: $title-border;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding: $spacing-lg $spacing-md 25px $spacing-md;
+  }
 
   &__wrapper {
     text-align: center;
@@ -8,8 +14,21 @@
     margin-right: auto;
     font-weight: 500;
     color: $gray;
-    margin-bottom: 16px;
-    line-height: 16px;
+    margin-bottom: $spacing-sm;
+    line-height: $spacing-sm;
+
+    &--copyright {
+      @include tablet {
+        text-align: start;
+      }
+    }
+
+    &--offer {
+      @include tablet {
+        text-align: end;
+        max-width: 213px;
+      }
+    }
 
     &:last-child {
       margin-bottom: 0;

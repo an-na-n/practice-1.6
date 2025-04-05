@@ -4,11 +4,19 @@
   &::before {
     @include fading-effect-left(35px, 80%, 20px, -0.9);
     z-index: 5;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &::after {
     @include fading-effect(35px, 80%, 24px, -0.9);
     z-index: 2;
+
+    @include tablet {
+      display: none;
+    }
   }
 }
 
@@ -18,9 +26,15 @@
   & .swiper-slide {
     position: relative;
     padding: 16px;
-    margin-bottom: 24px;
+    margin-bottom: $spacing-md;
     padding-right: 0;
     width: 75%;
+
+    @include tablet {
+      margin-bottom: $spacing-sm;
+      padding: 0;
+      width: auto;
+    }
 
     &:last-child {
       padding-right: 16px;

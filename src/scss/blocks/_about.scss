@@ -1,17 +1,47 @@
 .about {
   padding-top: 12px;
-  padding-bottom: 35px;
+  padding-bottom: $spacing-md;
 
-  &__wrapper--left {
-    padding-left: 16px;
-    padding-right: 21px;
-    margin-bottom: 16px;
+  @include tablet {
+    padding-top: $spacing-sm;
+    padding-bottom: 28px;
+  }
+
+  &__info {
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__wrapper {
+    &--left {
+      padding-left: $spacing-sm;
+      padding-right: 21px;
+      margin-bottom: $spacing-sm;
+
+      @include tablet {
+        margin-right: 55px;
+        margin-bottom: 0;
+        padding-left: $spacing-md;
+        padding-right: 0;
+      }
+    }
+
+    &--right {
+      @include mobile-lg {
+        padding-left: $spacing-sm;
+      }
+    }
   }
 
   &__text {
-    margin-bottom: 16px;
+    margin-bottom: $spacing-sm;
     font-size: 14px;
     line-height: 18px;
+
+    @include tablet {
+      line-height: 20px;
+    }
 
     &--768 {
       display: none;
@@ -28,33 +58,54 @@
   }
 
   &__button {
-    display: inline-flex;
-    align-items: center;
-    position: relative;
-    margin-bottom: 16px;
-    padding-left: 16px;
-    font-weight: 500;
-    transition: $transition-default;
+    @include show-more($spacing-sm, $spacing-sm);
 
-    &:hover {
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    &:hover:not(.active) {
       color: $gray;
+    }
+
+    &:focus:not(.hover) {
+      color: inherit;
     }
   }
 
   &__button-text {
-    padding-left: 32px;
+    padding-left: $spacing-sm;
+    font-size: $font-size-md;
   }
 
   &__svg {
     position: absolute;
-    left: 24px;
+    left: 8px;
+
+    @include tablet {
+      left: 9px;
+    }
 
     &.open {
       rotate: 180deg;
     }
   }
 
+  &__picture {
+    @include tablet {
+      padding-right: 25px;
+    }
+  }
+
   &__img {
     min-width: 320px;
+
+    @include mobile-lg {
+      border-radius: 6px;
+    }
+
+    @include tablet {
+      min-width: 360px;
+    }
   }
 }

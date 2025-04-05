@@ -59,7 +59,15 @@
       transition: $transition-default;
     }
 
-    &:hover::placeholder {
+    &:hover:not(.active)::placeholder {
+      color: $pink;
+    }
+
+    &:active::placeholder {
+      color: $pink;
+    }
+
+    &:focus:not(.hover)::placeholder {
       color: $pink;
     }
 
@@ -67,8 +75,19 @@
       height: 118px;
     }
 
-    &:hover {
+    &:hover:not(.active) {
       border-color: $lightPink;
+    }
+
+    &:active {
+      outline: none;
+      border-color: $pink;
+    }
+
+    &:focus:not(.hover) {
+      outline: $pink;
+      border-color: $pink;
+      background-color: #fdf6f7;
     }
   }
 

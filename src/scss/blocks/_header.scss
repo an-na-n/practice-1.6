@@ -5,6 +5,10 @@
   border-bottom: 1px solid $babyBlue;
   background-color: $white;
 
+  @include tablet {
+    padding: $spacing-md;
+  }
+
   &--pc {
     display: none;
   }
@@ -21,6 +25,12 @@
     background-image: url(../img/header__wrapper--svg.svg);
     background-repeat: no-repeat;
     background-position: center right;
+
+    @include tablet {
+      padding-right: 0;
+      padding-left: 23px;
+      background-position: center left;
+    }
   }
 
   &__svg {
@@ -29,10 +39,18 @@
     &--burger {
       top: 12px;
     }
+
+    &--status {
+      right: 12px;
+    }
   }
 
   &__burger {
     margin-right: 17px;
+
+    @include tablet {
+      margin-right: 20px;
+    }
   }
 
   &__nav {
@@ -48,13 +66,44 @@
 
   &__item {
     height: 40px;
+
+    &--profile {
+      @include tablet {
+        margin-right: 22px;
+        padding-right: 22px;
+        background-image: url(../img/header__wrapper--svg.svg);
+        background-repeat: no-repeat;
+        background-position: center right;
+      }
+    }
   }
 
   &__button {
-    &--call,
-    &--chat,
+    &--call {
+      display: none;
+
+      @include tablet {
+        display: block;
+        margin-left: $spacing-sm;
+      }
+    }
+
+    &--chat {
+      display: none;
+
+      @include tablet {
+        display: block;
+        margin-left: $spacing-sm;
+      }
+    }
+
     &--profile {
       display: none;
+
+      @include tablet {
+        display: block;
+        margin-left: 20px;
+      }
     }
 
     &--request {
@@ -62,7 +111,7 @@
     }
 
     &--status {
-      margin-left: 16px;
+      margin-left: $spacing-sm;
     }
   }
 }

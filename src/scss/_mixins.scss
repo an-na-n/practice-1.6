@@ -1,5 +1,11 @@
-@mixin mobile-lg {
+@mixin mobile-md {
   @media (min-width: 321px) {
+    @content;
+  }
+}
+
+@mixin mobile-lg {
+  @media (min-width: 360px) {
     @content;
   }
 }
@@ -24,6 +30,12 @@
 
 @mixin desktop-lg {
   @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin desktop-xxl {
+  @media (min-width: 1650px) {
     @content;
   }
 }

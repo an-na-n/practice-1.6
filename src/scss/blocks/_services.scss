@@ -1,12 +1,3 @@
-.main-title {
-  margin-bottom: $spacing-md;
-  padding-left: $spacing-sm;
-
-  @include tablet {
-    padding-left: $spacing-md;
-  }
-}
-
 .services {
   position: relative;
   padding-top: $spacing-md;
@@ -16,13 +7,17 @@
     padding-bottom: $spacing-lg;
   }
 
+  @include desktop-md {
+    display: none;
+  }
+
   &::before {
-    @include fading-effect-left(14px, 40px, 20px, 0.1);
+    @include fading-effect-left(14px, 50%, 20px, 0.1);
     z-index: 5;
   }
 
   &::after {
-    @include fading-effect(16px, 40px, 24px, 0.1);
+    @include fading-effect(16px, 100%, 24px, 0.1);
   }
 
   &__list {
@@ -33,34 +28,10 @@
     overflow-x: scroll;
     padding-left: 16px;
     scrollbar-width: none;
-  }
 
-  &__button {
-    padding: 8px 17px 8px 17px;
-    color: $gray;
-    font-size: $font-size-md;
-    font-weight: 500;
-    min-width: max-content;
-    border: 2px solid transparent;
-    border-radius: 6px;
-    transition: $transition-default;
-
-    &:hover {
-      color: $pink;
-      background-color: $white;
-      border-color: $lightPink;
-      border-radius: 6px;
-    }
-
-    &--active {
-      background-color: $white;
-      border: 2px solid $lightBlue;
-      border-radius: 6px;
-
-      &:hover {
-        color: $gray;
-        border: 2px solid $lightBlue;
-      }
+    @include desktop-sm {
+      overflow-x: hidden;
+      flex-wrap: wrap;
     }
   }
 }

@@ -9,13 +9,39 @@
     padding: $spacing-md;
   }
 
+  @include desktop-md {
+    padding: 42px 22px 0 305px;
+    background-color: $bgColor;
+    border-bottom: none;
+  }
+
+  &--not-pc {
+    @include desktop-md {
+      display: none;
+    }
+  }
+
   &--pc {
     display: none;
+
+    @include desktop-md {
+      display: block;
+    }
   }
 
   &__wrapper {
     display: flex;
     align-items: center;
+
+    &--top-pc {
+      justify-content: space-between;
+      align-content: center;
+      margin-bottom: 8px;
+    }
+
+    &--bottom-pc {
+      padding-left: 34px;
+    }
   }
 
   &__logo {
@@ -35,6 +61,10 @@
 
   &__svg {
     @include button-svg;
+
+    @include desktop-md {
+      z-index: 5;
+    }
 
     &--burger {
       top: 12px;
@@ -56,12 +86,83 @@
   &__nav {
     display: flex;
   }
+
+  &__list {
+    @include desktop-md {
+      display: flex;
+    }
+  }
+
+  &__item {
+    @include desktop-md {
+      margin-right: $spacing-md;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    @include desktop-md {
+      @include show-more(0, 0);
+      height: 40px;
+      padding-right: 48px;
+      min-width: max-content;
+      font-size: $font-size-md;
+      font-weight: 500;
+      color: $white;
+      transition: $transition-default;
+    }
+
+    &::after {
+      @include desktop-md {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: $pink;
+        top: 0;
+        right: 0;
+        border-radius: 50%;
+        transition: $transition-default;
+      }
+    }
+
+    &:hover {
+      @include desktop-md {
+        color: $pink;
+      }
+    }
+
+    &:hover .header__link-text {
+      @include desktop-md {
+        color: $pink;
+      }
+    }
+
+    &:hover::after {
+      @include desktop-md {
+        background-color: $lightPink;
+      }
+    }
+  }
+
+  &__link-text {
+    color: $text;
+    transition: $transition-default;
+  }
 }
 
 .nav {
   &__list {
     display: flex;
     align-items: center;
+
+    @include desktop-md {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {

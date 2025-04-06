@@ -5,9 +5,32 @@
     padding-bottom: $spacing-lg;
   }
 
+  &__container {
+    @include desktop-xxl {
+      display: flex;
+    }
+  }
+
   &__list {
     @include tablet {
       @include cards-list(768px, $spacing-md, $spacing-md);
+    }
+
+    @include desktop-sm {
+      max-width: 1120px;
+    }
+
+    @include desktop-md {
+      @include cards-list(1366px, $spacing-lg, $spacing-lg);
+    }
+
+    @include desktop-lg {
+      @include cards-list(1440px, $spacing-lg, $spacing-lg);
+    }
+
+    @include desktop-xxl {
+      flex-shrink: 1;
+      justify-content: center;
     }
   }
 
@@ -16,8 +39,38 @@
       @include cards-items(224px, $spacing-md);
     }
 
+    @include desktop-sm {
+      width: 240px;
+    }
+
+    @include desktop-md {
+      margin-right: 29px;
+    }
+
+    @include desktop-lg {
+      @include cards-items(240px, $spacing-lg);
+    }
+
     &:nth-child(3n) {
       margin-right: 0;
+
+      @include desktop-sm {
+        margin-right: $spacing-md;
+      }
+
+      @include desktop-lg {
+        margin-right: 29px;
+      }
+
+      @include desktop-lg {
+        margin-right: $spacing-lg;
+      }
+    }
+
+    &:nth-child(4n) {
+      @include desktop-sm {
+        margin-right: 0;
+      }
     }
   }
 
@@ -36,6 +89,10 @@
 
     @include tablet {
       width: 224px;
+    }
+
+    @include desktop-lg {
+      width: 240px;
     }
   }
 
@@ -68,6 +125,10 @@
     @include tablet {
       position: absolute;
       left: $spacing-lg;
+    }
+
+    @include desktop-md {
+      left: 40px;
     }
 
     &.open {

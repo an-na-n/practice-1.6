@@ -5,6 +5,10 @@
     padding-bottom: 47px;
   }
 
+  @include desktop-md {
+    padding-bottom: 50px;
+  }
+
   &__title {
     @include tablet {
       margin-bottom: 31px;
@@ -20,6 +24,11 @@
       padding-right: 40px;
       display: flex;
       justify-content: space-between;
+    }
+
+    @include desktop-md {
+      padding-left: 56px;
+      padding-right: 56px;
     }
 
     &::after {
@@ -38,6 +47,10 @@
     @include tablet {
       display: flex;
       padding: $spacing-sm $spacing-md;
+    }
+
+    @include desktop-md {
+      padding: $spacing-sm $spacing-lg $spacing-lg $spacing-lg;
     }
   }
 
@@ -114,6 +127,10 @@
       padding: $spacing-md $spacing-sm;
       width: 100%;
       height: auto;
+    }
+
+    @include desktop-md {
+      padding: $spacing-md;
     }
   }
 
@@ -201,6 +218,10 @@
       padding: 0 0 $spacing-sm $spacing-md;
       width: 431px;
     }
+
+    @include desktop-md {
+      padding-left: $spacing-lg;
+    }
   }
 
   &__offer {
@@ -214,6 +235,10 @@
 
     @include tablet {
       padding-left: $spacing-md;
+    }
+
+    @include desktop-md {
+      padding-left: $spacing-lg;
     }
 
     &:hover {

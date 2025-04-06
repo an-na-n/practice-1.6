@@ -7,6 +7,11 @@
     padding-bottom: 28px;
   }
 
+  @include desktop-md {
+    padding-top: 0;
+    padding-bottom: 51px;
+  }
+
   &__info {
     @include tablet {
       display: flex;
@@ -25,10 +30,15 @@
         padding-left: $spacing-md;
         padding-right: 0;
       }
+
+      @include desktop-md {
+        padding-top: 10px;
+        padding-left: $spacing-lg;
+      }
     }
 
     &--right {
-      @include mobile-lg {
+      @include mobile-md {
         padding-left: $spacing-sm;
       }
     }
@@ -95,17 +105,25 @@
     @include tablet {
       padding-right: 25px;
     }
+
+    @include desktop-md {
+      padding-right: 29px;
+    }
   }
 
   &__img {
     min-width: 320px;
 
-    @include mobile-lg {
+    @include mobile-md {
       border-radius: 6px;
     }
 
     @include tablet {
       min-width: 360px;
+    }
+
+    @include desktop-md {
+      min-width: 532px;
     }
   }
 }

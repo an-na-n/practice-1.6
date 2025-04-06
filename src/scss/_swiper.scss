@@ -38,6 +38,10 @@
 
     &:last-child {
       padding-right: 16px;
+
+      @include tablet {
+        padding-right: 0;
+      }
     }
   }
 }

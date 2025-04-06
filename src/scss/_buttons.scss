@@ -24,3 +24,36 @@
     background-color: $lightPink;
   }
 }
+
+.service-buton {
+  padding: 8px 17px 8px 17px;
+  color: $gray;
+  font-size: $font-size-md;
+  font-weight: 500;
+  min-width: max-content;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: $transition-default;
+
+  @include desktop-md {
+    padding: 7px 19px 7px 19px;
+  }
+
+  &:hover {
+    color: $pink;
+    background-color: $white;
+    border-color: $lightPink;
+    border-radius: 6px;
+  }
+
+  &--active {
+    background-color: $white;
+    border: 2px solid $lightBlue;
+    border-radius: 6px;
+
+    &:hover {
+      color: $gray;
+      border: 2px solid $lightBlue;
+    }
+  }
+}

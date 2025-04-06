@@ -63,11 +63,23 @@ body.no-scroll {
 
 .main-title {
   margin: 0;
+  margin-bottom: $spacing-md;
+  padding-left: $spacing-sm;
   font-weight: 700;
   line-height: 40px;
   font-size: $font-size-lg;
   letter-spacing: -0.6px;
   @include side-accent(4px, 40px);
+
+  @include tablet {
+    padding-left: $spacing-md;
+  }
+
+  @include desktop-md {
+    margin-bottom: 0;
+    padding-left: $spacing-lg;
+    background-image: url(../img/side-accent-pc--svg.svg);
+  }
 }
 
 .title {
@@ -84,6 +96,10 @@ body.no-scroll {
 
   @include tablet {
     @include titles-padding($spacing-md);
+  }
+
+  @include desktop-md {
+    @include titles-padding($spacing-lg);
   }
 }
 
@@ -120,4 +136,10 @@ button {
   line-height: 24px;
   letter-spacing: -0.2px;
   cursor: pointer;
+}
+
+.container {
+  @include desktop-md {
+    padding-left: 305px;
+  }
 }

@@ -7,7 +7,7 @@ let isTextOpen = false
 
 const getVisibleEl = function () {
   let width = window.innerWidth
-  if (width >= 1440) {
+  if (width >= 1120) {
     return 3
   } else if (width >= 768) {
     return 2

@@ -8,6 +8,10 @@
     padding: $spacing-lg $spacing-md 25px $spacing-md;
   }
 
+  @include desktop-md {
+    padding: $spacing-lg $spacing-lg 21px 305px;
+  }
+
   &__wrapper {
     text-align: center;
     margin-left: auto;
@@ -16,6 +20,15 @@
     color: $gray;
     margin-bottom: $spacing-sm;
     line-height: $spacing-sm;
+
+    @include tablet {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @include desktop-md {
+      padding-left: $spacing-lg;
+    }
 
     &--copyright {
       @include tablet {
@@ -27,6 +40,10 @@
       @include tablet {
         text-align: end;
         max-width: 213px;
+      }
+
+      @include desktop-md {
+        max-width: 330px;
       }
     }
 

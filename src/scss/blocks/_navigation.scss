@@ -6,10 +6,18 @@
   min-height: 100vh;
   z-index: 100;
 
+  @include desktop-md {
+    display: block;
+  }
+
   &__overlay {
     @include modal-overlay;
     left: 0;
     z-index: 99;
+
+    @include desktop-md {
+      visibility: hidden;
+    }
   }
 
   &__content {
@@ -22,6 +30,23 @@
     background-color: $white;
     z-index: 100;
 
+    @include mobile-lg {
+      width: 360px;
+    }
+
+    @include tablet {
+      width: 320px;
+    }
+
+    @include desktop-md {
+      visibility: visible;
+      box-shadow: none;
+    }
+
+    @include desktop-md {
+      width: 305px;
+    }
+
     &::-webkit-scrollbar {
       display: none;
     }
@@ -29,9 +54,14 @@
 
   &__header {
     margin-bottom: 23px;
-    padding: 19px 16px 0 16px;
+    padding: 19px $spacing-sm 0 $spacing-sm;
     display: flex;
     align-items: center;
+
+    @include desktop-md {
+      margin-bottom: 38px;
+      padding: 30px 31px 0 22px;
+    }
   }
 
   &__logo {
@@ -42,12 +72,16 @@
   &__wrapper {
     display: flex;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: $spacing-sm;
   }
 
   &__button {
     &--close {
       margin-right: 17px;
+
+      @include desktop-md {
+        display: none;
+      }
     }
 
     &--search {
@@ -55,11 +89,11 @@
     }
 
     &--call {
-      margin-right: 16px;
+      margin-right: $spacing-sm;
     }
 
     &--chat {
-      margin-right: 16px;
+      margin-right: $spacing-sm;
     }
   }
 
@@ -68,8 +102,14 @@
     width: 100%;
   }
 
+  &__nav {
+    @include tablet {
+      margin-bottom: auto;
+    }
+  }
+
   &__list {
-    margin-bottom: 32px;
+    margin-bottom: $spacing-lg;
 
     &--lang {
       display: flex;
@@ -78,10 +118,14 @@
   }
 
   &__item {
-    padding: 12px 0 12px 16px;
+    padding: 12px 0 12px $spacing-sm;
     font-size: $font-size-md;
     line-height: 24px;
     transition: color 0.3s ease-in-out;
+
+    @include desktop-md {
+      padding-left: $spacing-md;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -89,7 +133,6 @@
     }
 
     &:hover {
-      color: $pink;
       @include side-accent(4px, 32px);
       background-image: url(../img/side-accent--pink--svg.svg);
     }
@@ -98,9 +141,31 @@
       color: $gray;
       @include side-accent(4px, 32px);
 
+      @include desktop-md {
+        background: none;
+        color: $text;
+      }
+
       &:hover {
         @include side-accent(4px, 32px);
+
+        @include desktop-md {
+          @include side-accent(4px, 32px);
+          background-image: url(../img/side-accent--pink--svg.svg);
+        }
+      }
+    }
+
+    &--active-pc {
+      @include desktop-md {
         color: $gray;
+        @include side-accent(4px, 32px);
+
+        &:hover {
+          @include desktop-md {
+            @include side-accent(4px, 32px);
+          }
+        }
       }
     }
 
@@ -110,6 +175,11 @@
 
       &:last-child {
         margin-right: 0;
+      }
+
+      &:hover:not(.active) {
+        color: $pink;
+        background: none;
       }
     }
   }
@@ -139,16 +209,40 @@
     &:hover {
       color: $pink;
     }
+
+    &--active {
+      &:hover {
+        color: $gray;
+
+        @include desktop-md {
+          color: $pink;
+        }
+      }
+    }
+
+    &--active-pc:hover {
+      @include desktop-md {
+        color: $gray;
+      }
+    }
   }
 
   &__contacts {
     margin-bottom: 8px;
-    padding-left: 24px;
+    padding-left: $spacing-md;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
   }
 
   &__lang {
-    padding-left: 24px;
-    padding-bottom: 32px;
+    padding-left: $spacing-md;
+    padding-bottom: $spacing-lg;
+
+    @include tablet {
+      padding-bottom: 10px;
+    }
   }
 
   &__radio[type='radio'] {

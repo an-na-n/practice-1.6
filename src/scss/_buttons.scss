@@ -25,6 +25,14 @@
   }
 }
 
+.close-button {
+  @include desktop-md {
+    position: absolute;
+    top: $spacing-lg;
+    left: -72px;
+  }
+}
+
 .service-buton {
   padding: 8px 17px 8px 17px;
   color: $gray;

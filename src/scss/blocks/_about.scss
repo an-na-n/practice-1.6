@@ -77,10 +77,6 @@
     &:hover:not(.active) {
       color: $gray;
     }
-
-    &:focus:not(.hover) {
-      color: inherit;
-    }
   }
 
   &__button-text {

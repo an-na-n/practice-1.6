@@ -1,79 +1,4 @@
 .brands {
-  padding-bottom: 14px;
-
-  @include tablet {
-    padding-bottom: $spacing-lg;
-  }
-
-  &__container {
-    @include desktop-xxl {
-      display: flex;
-    }
-  }
-
-  &__list {
-    @include tablet {
-      @include cards-list(768px, $spacing-md, $spacing-md);
-    }
-
-    @include desktop-sm {
-      max-width: 1120px;
-    }
-
-    @include desktop-md {
-      @include cards-list(1366px, $spacing-lg, $spacing-lg);
-    }
-
-    @include desktop-lg {
-      @include cards-list(1440px, $spacing-lg, $spacing-lg);
-    }
-
-    @include desktop-xxl {
-      flex-shrink: 1;
-      justify-content: center;
-    }
-  }
-
-  &__item {
-    @include tablet {
-      @include cards-items(224px, $spacing-md);
-    }
-
-    @include desktop-sm {
-      @include cards-items(240px, $spacing-md);
-    }
-
-    @include desktop-md {
-      @include cards-items(240px, 29px);
-    }
-
-    @include desktop-lg {
-      @include cards-items(240px, $spacing-lg);
-    }
-
-    &:nth-child(3n) {
-      margin-right: 0;
-
-      @include desktop-sm {
-        margin-right: $spacing-md;
-      }
-
-      @include desktop-md {
-        margin-right: 29px;
-      }
-
-      @include desktop-lg {
-        margin-right: $spacing-lg;
-      }
-    }
-
-    &:nth-child(4n) {
-      @include desktop-sm {
-        margin-right: 0;
-      }
-    }
-  }
-
   &__svg rect {
     stroke: $pink;
     fill: none;
@@ -85,14 +10,11 @@
     padding: 20px 16px 20px 16px;
     @include swiper-cards(240px, 72px);
 
-    &:hover {
-      .brands__svg rect {
-        stroke: none;
-        fill: $lightPink;
-      }
+    @include tablet {
+      width: 224px;
     }
 
-    @include tablet {
+    @include desktop-md {
       width: 224px;
     }
 
@@ -101,42 +23,9 @@
     }
   }
 
-  &__show-more {
-    display: none;
-
-    @include tablet {
-      @include show-more(0, 48px);
-      margin-top: 8px;
-    }
-
-    &:hover:not(.active) {
-      color: $gray;
-    }
-
-    &:focus:not(.hover) {
-      color: inherit;
-    }
-  }
-
   &__svg-more {
-    @include tablet {
-      position: absolute;
-      left: $spacing-lg;
-    }
-
-    @include desktop-md {
-      left: 40px;
-    }
-
     &.open {
       rotate: 180deg;
-    }
-  }
-
-  &__button-text {
-    @include tablet {
-      padding-left: 8px;
-      font-size: $font-size-md;
     }
   }
 }

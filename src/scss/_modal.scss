@@ -11,6 +11,12 @@
     z-index: 99;
   }
 
+  &__title {
+    @include desktop-md {
+      margin-bottom: $spacing-md;
+    }
+  }
+
   &__content {
     position: absolute;
     right: 0;
@@ -26,8 +32,16 @@
       width: 360px;
     }
 
+    @include smartphone {
+      width: 390px;
+    }
+
     @include tablet {
       width: 320px;
+    }
+
+    @include desktop-md {
+      overflow: visible;
     }
 
     &::-webkit-scrollbar {
@@ -38,14 +52,22 @@
   &__header {
     padding: 25px 16px;
     margin-bottom: 8px;
+
+    @include desktop-md {
+      position: relative;
+      padding: 0;
+      margin-bottom: $spacing-lg;
+    }
   }
 
   &__button {
     position: relative;
+    text-align: left;
     width: 136px;
     margin-left: auto;
     bottom: 0;
-    padding: 4px 16px 4px 0;
+    padding-left: 19px;
+    padding-right: 19px;
     border: none;
 
     &--submit {

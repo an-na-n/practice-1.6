@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CPS</title>
-  <link href="style.css" rel="stylesheet"></head>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="/src/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/src/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/src/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/src/favicon/site.webmanifest">
+  <link rel="shortcut icon" href="favicon.ico"><link href="style.css" rel="stylesheet"></head>
   <body>
     <div class="navigation">
       <div class="navigation__overlay">
@@ -96,13 +102,13 @@
       <div class="modal__overlay feedback__overlay">
         <div class="modal__content feedback__content">
           <div class="modal__header feedback__header">
-            <button class="button button--round feedback__button feedback__button--close">
+            <button class="button button--round close-button feedback__button feedback__button--close">
               <svg class="button__svg modal__svg feedback__svg" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.79348 1.25712C2.40295 0.866593 1.76979 0.866592 1.37927 1.25712L1.25712 1.37927C0.866592 1.76979 0.866593 2.40296 1.25712 2.79348L7.46364 9L1.25712 15.2065C0.866593 15.597 0.866592 16.2302 1.25712 16.6207L1.37927 16.7429C1.76979 17.1334 2.40295 17.1334 2.79348 16.7429L9 10.5364L15.2065 16.7429C15.597 17.1334 16.2302 17.1334 16.6207 16.7429L16.7429 16.6207C17.1334 16.2302 17.1334 15.597 16.7429 15.2065L10.5364 9L16.7429 2.79348C17.1334 2.40296 17.1334 1.76979 16.7429 1.37927L16.6207 1.25712C16.2302 0.866592 15.597 0.866593 15.2065 1.25712L9 7.46364L2.79348 1.25712Z" fill="currentColor"/>
               </svg>
             </button>
           </div>
-          <h2 class="main-title feedback__title">Обратная связь</h2>
+          <h2 class="main-title modal__title feedback__title">Обратная связь</h2>
           <form action="" class="modal__form feedback__form">
             <input type="text" class="modal__input feedback__input feedback__input--name" placeholder="Имя" required>
             <input type="tel" class="modal__input feedback__input feedback__input--phone" placeholder="Телефон" required>
@@ -128,13 +134,13 @@
       <div class="modal__overlay call__overlay">
         <div class="modal__content call__content">
           <div class="modal__header call__header">
-            <button class="button button--round call__button call__button--close">
+            <button class="button button--round close-button call__button call__button--close">
               <svg class="button__svg modal__svg call__svg" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.79348 1.25712C2.40295 0.866593 1.76979 0.866592 1.37927 1.25712L1.25712 1.37927C0.866592 1.76979 0.866593 2.40296 1.25712 2.79348L7.46364 9L1.25712 15.2065C0.866593 15.597 0.866592 16.2302 1.25712 16.6207L1.37927 16.7429C1.76979 17.1334 2.40295 17.1334 2.79348 16.7429L9 10.5364L15.2065 16.7429C15.597 17.1334 16.2302 17.1334 16.6207 16.7429L16.7429 16.6207C17.1334 16.2302 17.1334 15.597 16.7429 15.2065L10.5364 9L16.7429 2.79348C17.1334 2.40296 17.1334 1.76979 16.7429 1.37927L16.6207 1.25712C16.2302 0.866592 15.597 0.866593 15.2065 1.25712L9 7.46364L2.79348 1.25712Z" fill="currentColor"/>
               </svg>
             </button>
           </div>
-          <h2 class="main-title call__title">Заказать звонок</h2>
+          <h2 class="main-title modal__title call__title">Заказать звонок</h2>
           <form action="" class="modal__form call__form">
             <input type="tel" class="modal__input call__input" placeholder="Телефон">
             <p class="modal__note call__note">
@@ -327,104 +333,104 @@
           </div>
         </article>
       </section>
-      <section class="brands">
+      <section class="cards brands">
         <h2 class="title brands__title">Ремонт техники различных брендов</h2>
-        <div class="swiper brands__container">
-          <ul class="brands__list swiper-wrapper">
-            <li class="brands__item swiper-slide">
-              <a href="#" class="brands__link brands__link--lenovo">
+        <div class="swiper cards__container brands__container">
+          <ul class="brands__list cards__list swiper-wrapper">
+            <li class="brands__item cards__item swiper-slide">
+              <a href="#" class="brands__link brands__link--lenovo cards__link">
                 <img src="./img/brands--lenovo.png" alt="Lenovo" class="brands__img">
-                <svg class="brands__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="brands__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="brands__item swiper-slide">
-              <a href="#" class="brands__link brands__link--samsung">
+            <li class="brands__item cards__item swiper-slide">
+              <a href="#" class="brands__link brands__link--samsung cards__link">
                 <img src="./img/brands--samsung.png" alt="Samsung" class="brands__img">
-                <svg class="brands__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="brands__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="brands__item swiper-slide">
-              <a href="#" class="brands__link brands__link--apple">
+            <li class="brands__item cards__item swiper-slide">
+              <a href="#" class="cards__link brands__link brands__link--apple">
                 <img src="./img/brands--apple.png" alt="Apple" class="brands__img">
-                <svg class="brands__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="brands__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="brands__item swiper-slide">
-              <a href="#" class="brands__link brands__link--viewsonic">
+            <li class="brands__item cards__item swiper-slide">
+              <a href="#" class="cards__link brands__link brands__link--viewsonic">
                 <img src="./img/brands--viewsonic.png" alt="ViewSonic" class="brands__img">
-                <svg class="brands__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="brands__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="brands__item swiper-slide">
-              <a href="#" class="brands__link brands__link--bosch">
+            <li class="brands__item cards__item swiper-slide">
+              <a href="#" class="cards__link brands__link brands__link--bosch">
                 <img src="./img/brands--bosch.png" alt="Bosch" class="brands__img">
-                <svg class="brands__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="brands__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="brands__item swiper-slide">
-              <a href="#" class="brands__link brands__link--hp">
+            <li class="brands__item cards__item swiper-slide">
+              <a href="#" class="cards__link brands__link brands__link--hp">
                 <img src="./img/brands--hp.png" alt="HP" class="brands__img">
-                <svg class="brands__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="brands__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="brands__item swiper-slide">
-              <a href="#" class="brands__link brands__link--acer">
+            <li class="brands__item cards__item swiper-slide">
+              <a href="#" class="cards__link brands__link brands__link--acer">
                 <img src="./img/brands--acer.png" alt="Acer" class="brands__img">
-                <svg class="brands__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="brands__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="brands__item swiper-slide">
-              <a href="#" class="brands__link brands__link--sony">
+            <li class="brands__item cards__item swiper-slide">
+              <a href="#" class="cards__link brands__link brands__link--sony">
                 <img src="./img/brands--sony.png" alt="Sony" class="brands__img">
-                <svg class="brands__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="brands__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="brands__item swiper-slide">
-              <a href="#" class="brands__link brands__link--lenovo">
+            <li class="brands__item cards__item swiper-slide">
+              <a href="#" class="cards__link brands__link brands__link--lenovo">
                 <img src="./img/brands--lenovo.png" alt="Lenovo" class="brands__img">
-                <svg class="brands__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="brands__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="brands__item swiper-slide">
-              <a href="#" class="brands__link brands__link--samsung">
+            <li class="brands__item cards__item swiper-slide">
+              <a href="#" class="cards__link brands__link brands__link--samsung">
                 <img src="./img/brands--samsung.png" alt="Samsung" class="brands__img">
-                <svg class="brands__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="brands__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="brands__item swiper-slide">
-              <a href="#" class="brands__link brands__link--apple">
+            <li class="brands__item cards__item swiper-slide">
+              <a href="#" class="cards__link brands__link brands__link--apple">
                 <img src="./img/brands--apple.png" alt="Apple" class="brands__img">
-                <svg class="brands__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="brands__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
@@ -433,84 +439,86 @@
           </ul>
           <div class="swiper-pagination"></div>
         </div>
-        <a href="#" class="brands__show-more">
-          <svg class="brands__svg-more" width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z" fill="#41F6D7"/>
-          </svg>
-          <span class="brands__button-text">Показать все</span>
-        </a>
+        <div class="cards__button-wrapper brands__button-wrapper">
+          <a href="#" class="cards__show-more brands__show-more">
+            <svg class="cards__svg-more brands__svg-more" width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z" fill="#41F6D7"/>
+            </svg>
+            <span class="cards__button-text brands__button-text">Показать все</span>
+          </a>
+        </div>
       </section>
-      <section class="equipment">
+      <section class="cards equipment">
         <h2 class="title equipment__title">Ремонт различных видов техники</h2>
-        <div class="swiper equipment__container">
-          <ul class="equipment__list swiper-wrapper">
-            <li class="equipment__item swiper-slide">
-              <a href="#" class="equipment__link equipment__link--laptops">
+        <div class="swiper equipment__container cards__container">
+          <ul class="equipment__list cards__list swiper-wrapper">
+            <li class="equipment__item cards__item swiper-slide">
+              <a href="#" class="cards__link equipment__link equipment__link--laptops">
                 Ремонт ноутбуков
-                <svg class="equipment__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="equipment__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="equipment__item swiper-slide">
-              <a href="#" class="equipment__link equipment__link--tablets">
+            <li class="equipment__item cards__item swiper-slide">
+              <a href="#" class="cards__link equipment__link equipment__link--tablets">
                 Ремонт планшетов
-                <svg class="equipment__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="equipment__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="equipment__item swiper-slide">
-              <a href="#" class="equipment__link equipment__link--pc">
+            <li class="equipment__item cards__item swiper-slide">
+              <a href="#" class="cards__link equipment__link equipment__link--pc">
                 Ремонт ПК
-                <svg class="equipment__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="equipment__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="equipment__item swiper-slide">
-              <a href="#" class="equipment__link equipment__link--monitors">
+            <li class="equipment__item cards__item swiper-slide">
+              <a href="#" class="cards__link equipment__link equipment__link--monitors">
                 Ремонт мониторов
-                <svg class="equipment__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="equipment__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="equipment__item swiper-slide">
-              <a href="#" class="equipment__link equipment__link--monoblocks">
+            <li class="equipment__item cards__item swiper-slide">
+              <a href="#" class="cards__link equipment__link equipment__link--monoblocks">
                 Ремонт моноблоков
-                <svg class="equipment__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="equipment__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="equipment__item swiper-slide">
-              <a href="#" class="equipment__link equipment__smartphones">
+            <li class="equipment__item cards__item swiper-slide">
+              <a href="#" class="cards__link equipment__link equipment__smartphones">
                 Ремонт смартфонов
-                <svg class="equipment__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="equipment__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="equipment__item swiper-slide">
-              <a href="#" class="equipment__link equipment__link--printers">
+            <li class="equipment__item cards__item swiper-slide">
+              <a href="#" class="cards__link equipment__link equipment__link--printers">
                 Ремонт принтеров и МФУ
-                <svg class="equipment__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="equipment__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
               </a>
             </li>
-            <li class="equipment__item swiper-slide">
-              <a href="#" class="equipment__link equipment__link--tv">
+            <li class="equipment__item cards__item swiper-slide">
+              <a href="#" class="cards__link equipment__link equipment__link--tv">
                 Ремонт телевизоров
-                <svg class="equipment__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="equipment__svg cards__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z" fill="#FF3E79"/>
                 </svg>
@@ -519,43 +527,49 @@
           </ul>
           <div class="swiper-pagination"></div>
         </div>
-        <a href="#" class="equipment__show-more">
-          <svg class="equipment__svg-more" width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z" fill="#41F6D7"/>
-          </svg>
-          <span class="equipment__button-text">Показать все</span>
-        </a>
+        <div class="cards__button-wrapper equipment__button-wrapper">
+          <a href="#" class="cards__show-more equipment__show-more">
+            <svg class="cards__svg-more equipment__svg-more" width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z" fill="#41F6D7"/>
+            </svg>
+            <span class="cards__button-text equipment__button-text">Показать все</span>
+          </a>
+        </div>
       </section>
       <section class="prices">
         <h2 class="title prices__title">Цены на услуги</h2>
         <div class="prices__header">
-          <p class="prices__subtitle prices__subtitle--type">
+          <div class="prices__subtitle prices__subtitle--type">
             Ремонтные услуги
-          </p>
-          <p class="prices__subtitle prices__subtitle--price"> Цена </p>
-          <p class="prices__subtitle prices__subtitle--time"> Срок </p>
+          </div>
+          <div class="prices__subtitle prices__subtitle--price"> Цена </div>
+          <div class="prices__subtitle prices__subtitle--time"> Срок </div>
         </div>
-        <div class="swiper prices__container">
+        <div class="swidiver prices__container">
           <ul class="prices__list swiper-wrapper">
             <li class="prices__item swiper-slide">
               <div class="prices__content">
                 <div class="prices__type prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--type">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--type">
                     Ремонтные услуги
-                  </p>
-                  <p class="prices__descr prices__descr--type"> Диагностика </p>
+                  </div>
+                  <div class="prices__descr prices__descr--type">
+                    Диагностика
+                  </div>
                 </div>
                 <div class="prices__price prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--price">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--price">
                     Цена
-                  </p>
-                  <p class="prices__descr prices__descr--price"> Бесплатно </p>
+                  </div>
+                  <div class="prices__descr prices__descr--price">
+                    Бесплатно
+                  </div>
                 </div>
                 <div class="prices__time prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--time">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--time">
                     Срок
-                  </p>
-                  <p class="prices__descr prices__descr--time"> 30 мин </p>
+                  </div>
+                  <div class="prices__descr prices__descr--time"> 30 мин </div>
                 </div>
                 <button class="button button--wide prices__button">
                   Заказать
@@ -568,24 +582,28 @@
             <li class="prices__item swiper-slide">
               <div class="prices__content">
                 <div class="prices__type prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--type">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--type">
                     Ремонтные услуги
-                  </p>
-                  <p class="prices__descr prices__descr--type">
+                  </div>
+                  <div class="prices__descr prices__descr--type">
                     Замена дисплея
-                  </p>
+                  </div>
                 </div>
                 <div class="prices__price prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--price">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--price">
                     Цена
-                  </p>
-                  <p class="prices__descr prices__descr--price"> 1 000 ₽ </p>
+                  </div>
+                  <div class="prices__descr prices__descr--price">
+                    1 000 ₽
+                  </div>
                 </div>
                 <div class="prices__time prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--time">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--time">
                     Срок
-                  </p>
-                  <p class="prices__descr prices__descr--time"> 30-120 мин </p>
+                  </div>
+                  <div class="prices__descr prices__descr--time">
+                    30-120 мин
+                  </div>
                 </div>
                 <button class="button button--wide prices__button">
                   Заказать
@@ -598,24 +616,28 @@
             <li class="prices__item swiper-slide">
               <div class="prices__content">
                 <div class="prices__type prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--type">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--type">
                     Ремонтные услуги
-                  </p>
-                  <p class="prices__descr prices__descr--type">
+                  </div>
+                  <div class="prices__descr prices__descr--type">
                     Замена полифонического динамика
-                  </p>
+                  </div>
                 </div>
                 <div class="prices__price prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--price">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--price">
                     Цена
-                  </p>
-                  <p class="prices__descr prices__descr--price"> 1 000 ₽ </p>
+                  </div>
+                  <div class="prices__descr prices__descr--price">
+                    1 000 ₽
+                  </div>
                 </div>
                 <div class="prices__time prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--time">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--time">
                     Срок
-                  </p>
-                  <p class="prices__descr prices__descr--time"> 30-120 мин </p>
+                  </div>
+                  <div class="prices__descr prices__descr--time">
+                    30-120 мин
+                  </div>
                 </div>
                 <button class="button button--wide prices__button">
                   Заказать
@@ -628,24 +650,28 @@
             <li class="prices__item swiper-slide">
               <div class="prices__content">
                 <div class="prices__type prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--type">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--type">
                     Ремонтные услуги
-                  </p>
-                  <p class="prices__descr prices__descr--type">
+                  </div>
+                  <div class="prices__descr prices__descr--type">
                     Тестирование с выдачей технического заключения
-                  </p>
+                  </div>
                 </div>
                 <div class="prices__price prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--price">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--price">
                     Цена
-                  </p>
-                  <p class="prices__descr prices__descr--price"> 1 000 ₽ </p>
+                  </div>
+                  <div class="prices__descr prices__descr--price">
+                    1 000 ₽
+                  </div>
                 </div>
                 <div class="prices__time prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--time">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--time">
                     Срок
-                  </p>
-                  <p class="prices__descr prices__descr--time"> 30-120 мин </p>
+                  </div>
+                  <div class="prices__descr prices__descr--time">
+                    30-120 мин
+                  </div>
                 </div>
                 <button class="button button--wide prices__button">
                   Заказать
@@ -658,24 +684,28 @@
             <li class="prices__item swiper-slide">
               <div class="prices__content">
                 <div class="prices__type prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--type">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--type">
                     Ремонтные услуги
-                  </p>
-                  <p class="prices__descr prices__descr--type">
+                  </div>
+                  <div class="prices__descr prices__descr--type">
                     Замена программного обеспечения
-                  </p>
+                  </div>
                 </div>
                 <div class="prices__price prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--price">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--price">
                     Цена
-                  </p>
-                  <p class="prices__descr prices__descr--price"> 1 000 ₽ </p>
+                  </div>
+                  <div class="prices__descr prices__descr--price">
+                    1 000 ₽
+                  </div>
                 </div>
                 <div class="prices__time prices__wrapper">
-                  <p class="prices__subtitle prices__subtitle--mob prices__subtitle--time">
+                  <div class="prices__subtitle prices__subtitle--mob prices__subtitle--time">
                     Срок
-                  </p>
-                  <p class="prices__descr prices__descr--time"> 30-120 мин </p>
+                  </div>
+                  <div class="prices__descr prices__descr--time">
+                    30-120 мин
+                  </div>
                 </div>
                 <button class="button button--wide prices__button">
                   Заказать
